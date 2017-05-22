@@ -1,0 +1,13 @@
+
+node {
+ stage ("Setup"){
+  git([
+    url: "https://github.com/venicegeo/bftest-integration",
+    branch: "master"
+   ])
+  }
+ 
+ stage ("health-check"){
+  sh "ls -ll"
+ }
+} 
